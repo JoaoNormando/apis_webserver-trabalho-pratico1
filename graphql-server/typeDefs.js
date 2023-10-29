@@ -35,7 +35,10 @@ export const typeDefs = `#graphql
     }
 
     type Mutation {
-        findAllTasks(done: Boolean): [Task]
+        addTask(name: String, id_user: Int): TaskDetail
+        doneTask(id: Int): Task
+        updateTask(id: Int, name: String, id_user: Int): Task
+        deleteTask(id: Int): Message    
     }
     
 `

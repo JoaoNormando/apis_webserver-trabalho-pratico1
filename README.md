@@ -52,6 +52,7 @@ nodemon index.js
 
 Após isso, o projeto deverá estar disponível na porta 3000, com uma saída similar a essa:
 
+<img src="doc/images/run-app.png" alt="app-running">
 
 ### Lembre-se de adicionar um arquivo .env em (app/.env), para que o projeto consiga acessar o banco de dados que você disponibilizou.
 ### Nesse projeto, temos um Docker -compose auxiliar. Não é obrigatório o uso, apenas para facilitar você a subir seu banco Postgres
@@ -77,6 +78,8 @@ node index.js
 
 Após isso, o projeto deverá estar disponível na porta 5000, com uma saída similar a essa:
 
+<img src="doc/images/run-graphql-server.png" alt="graphql-running">
+
 #### Exemplo de configuração do arquivo .env
 
 ```
@@ -85,5 +88,12 @@ API_URL='http://localhost:3000'
 
 ***
 
+### Execução de chamadas em desenvolvimento
+#### Para testes, é disponibilizado uma collection na raiz do projeto. Basta importar no postman. A collection é dividida em Rest e Graphql.
 
-[⬆ Voltar ao topo](#desenvolvimento-de-um-sistema-de-votação-em-tempo-real)<br>
+<img src="doc/images/estrutura-collection.png" alt="estrutura-collection">
+
+* Para chamar via REST, utilizando apenas o APP. Use a pasta **Rest**
+* Para chamar via GraphQL, utilize a pasta GraphQL. **LEMBRANDO QUE É PREMISSA RODAR O PROJETO APP**
+
+[⬆ Voltar ao topo](#implementação-de-api-graphql)<br>

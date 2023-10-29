@@ -53,14 +53,35 @@ nodemon index.js
 Após isso, o projeto deverá estar disponível na porta 3000, com uma saída similar a essa:
 
 
-### Para executar o projeto graphql-server
+### Lembre-se de adicionar um arquivo .env em (app/.env), para que o projeto consiga acessar o banco de dados que você disponibilizou.
+### Nesse projeto, temos um Docker -compose auxiliar. Não é obrigatório o uso, apenas para facilitar você a subir seu banco Postgres
+
+```
+docker-compose up -d
+```
+
+#### Exemplo de configuração do arquivo .env
+
+```
+DATABASE_URL='postgres://postgres:postgres@localhost:5432/gestao-tarefas_db'
+```
+
+### Para executar o projeto graphql-server (É necessário rodar o APP ANTES!)
 
 ```
 cd graphql-server
 node index.js
 ```
 
+### Lembre-se de adicionar um arquivo .env em (graphql-server/.env), para que o projeto consiga acessar o projeto app que você rodou anteriormente.
+
 Após isso, o projeto deverá estar disponível na porta 5000, com uma saída similar a essa:
+
+#### Exemplo de configuração do arquivo .env
+
+```
+API_URL='http://localhost:3000'
+```
 
 ***
 

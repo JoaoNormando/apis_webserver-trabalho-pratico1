@@ -12,6 +12,7 @@ const tableName = 'tasks'
 
 exports.findAll = (req, res) => {
     const {done} = req.query
+    console.log(done)
     knex.select('*').from(tableName)
         .where(qb => {
             if (done != null) {
